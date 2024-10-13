@@ -70,17 +70,21 @@ const BarPilihTiket = () => {
           />
           <div className="w-full flex gap-4">
             <Input
-              type="text"
+              type="number"
+              min={0}
               label="Dewasa"
               radius="sm"
               placeholder="contoh : 2"
+              isRequired
               labelPlacement="outside"
             />
             <Input
-              type="text"
+              type="number"
+              min={0}
               label="Bayi"
               radius="sm"
               placeholder="contoh : 1"
+              isRequired
               labelPlacement="outside"
             />
             <div className="content-end py-2">
