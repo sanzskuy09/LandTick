@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ListJadwalTiket from "@/components/ListJadwalTiket";
 import BarPilihTiket from "@/components/BarPilihTiket";
+import { Button } from "@nextui-org/button";
 
 export default function Home() {
   return (
@@ -17,14 +18,17 @@ export default function Home() {
             <button className="border-2 border-gradientPrimary rounded-lg w-28 h-10 text-primary font-bold hover:bg-gradient-primary hover:text-white hover:border-gradientPrimary transition duration-200">
               <p className="bg-clip-text text-gradient-primary">DAFTAR</p>
             </button>
-            {/* <Button className="bg-gradient-primary text-white w-28 text-base font-bold hover:opacity-90 transition duration-200">
+            <Button
+              radius="sm"
+              className="bg-gradient-primary text-white w-28 text-base font-bold"
+            >
               LOGIN
-            </Button> */}
+            </Button>
           </div>
         </div>
       </div>
 
-      {/* content */}
+      {/* Jumbotron */}
       <div className="bg-gradient-primary h-80">
         <div className="max-w-[1200px] mx-auto grid grid-cols-2 items-center justify-between w-full h-full">
           <div className="text-white">
