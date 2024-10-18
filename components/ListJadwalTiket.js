@@ -1,6 +1,9 @@
+"use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const ListJadwalTiket = () => {
+  const router = useRouter();
   return (
     <div className="my-20">
       <table className="w-full mb-8">
@@ -15,7 +18,10 @@ const ListJadwalTiket = () => {
         </tr>
       </table>
 
-      <div className="border border-[#B7B7B7] rounded-md h-16 flex justify-between items-center px-16 py-12 mb-6">
+      <div
+        className="border border-[#B7B7B7] rounded-md h-16 flex justify-between items-center px-16 py-12 mb-6 cursor-pointer"
+        onClick={() => router.push("/ticket-saya")}
+      >
         <div className="flex gap-6">
           <div className="w-40">
             <h1 className="font-bold text-lg">Argo Wilss</h1>

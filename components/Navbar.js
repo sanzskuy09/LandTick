@@ -1,8 +1,23 @@
+"use client";
 import { Button } from "@nextui-org/button";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+  Checkbox,
+  Input,
+  Link,
+} from "@nextui-org/react";
+
 import Image from "next/image";
 import React from "react";
 
 const Navbar = () => {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   return (
     <div className="bg-white h-16 flex items-center bg-shadow">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between w-full">
@@ -18,11 +33,34 @@ const Navbar = () => {
           <Button
             radius="sm"
             className="bg-gradient-primary text-white w-28 text-base font-bold"
+            onPress={onOpen}
           >
             LOGIN
           </Button>
         </div>
       </div>
+
+      {/* modal */}
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center">
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+              <ModalBody>
+                <p>adsa</p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="flat" onPress={onClose}>
+                  Close
+                </Button>
+                <Button color="primary" onPress={onClose}>
+                  Sign in
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   );
 };
