@@ -22,8 +22,8 @@ const Navbar = () => {
     <div className="bg-white h-16 flex items-center shadow-lg">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between w-full px-4">
         <div className="flex items-center gap-4">
-          <p className="text-3xl font-medium text-primary">LandTick</p>
-          <Image src="/icon-navbar.png" alt="logo" width={50} height={50} />
+          {/* <p className="text-3xl font-medium text-primary">LandTick</p> */}
+          <Image src="/logo-navbar.png" alt="logo" width={200} height={50} />
         </div>
 
         <div className="flex items-center gap-4">
