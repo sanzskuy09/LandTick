@@ -71,33 +71,37 @@ const Invoice = () => {
           <div className="mt-8">
             <h1 className="text-4xl font-[100]">Rincian Harga</h1>
 
-            <div className="flex flex-col gap-2 items-center justify-center mt-4">
-              <div className="h-[220px] bg-secondary w-1/2 rounded-md border-2 border-black"></div>
-              <p className="text-secondary">upload payment proof</p>
-            </div>
-
-            <div className="mt-4 border-2 border-secondary rounded-md h-max">
-              <div className="flex justify-between px-5 py-6 w-full">
-                <p>Argo Wilis (Dewasa) x1</p>
-                <p>Rp.250.000</p>
+            <div className="flex flex-row-reverse">
+              <div className="flex flex-col gap-2 items-center justify-center mt-4 flex-1">
+                <div className="h-[220px] lg:h-[180px] bg-secondary w-1/2 lg:w-2/3 max-w-[200px] rounded-md border-2 border-black object-cover"></div>
+                <p className="text-secondary">upload payment proof</p>
               </div>
-              <div className="flex justify-between px-5 py-2 bg-[#E6E6E6]">
-                <h3 className="text-2xl">Total</h3>
-                <h1 className="text-2xl font-bold">Rp.250.000</h1>
+
+              <div className="flex-auto w-1/3">
+                <div className="mt-4 border-2 border-secondary rounded-md h-max">
+                  <div className="flex justify-between px-5 py-6 w-full">
+                    <p>Argo Wilis (Dewasa) x1</p>
+                    <p>Rp.250.000</p>
+                  </div>
+                  <div className="flex justify-between px-5 py-2 bg-[#E6E6E6]">
+                    <h3 className="text-2xl">Total</h3>
+                    <h1 className="text-2xl font-bold">Rp.250.000</h1>
+                  </div>
+                </div>
+
+                <Button
+                  radius="sm"
+                  className="bg-gradient-primary text-white w-full text-base font-bold mt-4"
+                >
+                  Bayar Sekarang
+                </Button>
               </div>
             </div>
-
-            <Button
-              radius="sm"
-              className="bg-gradient-primary text-white w-full text-base font-bold mt-4"
-            >
-              Bayar Sekarang
-            </Button>
           </div>
         </div>
 
         {/* jadwal kereta dan QR */}
-        <div className="min-h-[414px] md:w-3/4 lg:w-2/5 bg-[#F5F5F5]">
+        <div className="min-h-[414px] max-h-min md:w-3/4 lg:w-2/5 bg-[#F5F5F5]">
           <div className="bg-[#D0D0D0] px-8 py-4 flex justify-between items-center">
             <div className="flex flex-col gap-2">
               <h1 className="text-3xl font-bold">Kereta Api</h1>

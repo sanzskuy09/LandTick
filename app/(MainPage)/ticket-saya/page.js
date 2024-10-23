@@ -1,10 +1,14 @@
 "use client";
-import BadgeStatus from "@/components/BadgeStatus";
-import { Button } from "@nextui-org/button";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import BadgeStatus from "@/components/BadgeStatus";
+
+import { Button } from "@nextui-org/button";
 
 const TicketSaya = () => {
+  const router = useRouter();
   return (
     <div className="max-w-[1200px] mx-auto items-center justify-between mt-12 px-4">
       <p className="text-4xl font-thin text-center">Tiket Saya</p>
@@ -164,6 +168,7 @@ const TicketSaya = () => {
               <Button
                 radius="sm"
                 className="bg-gradient-primary text-white w-full text-base font-bold"
+                onPress={() => router.push("/invoice")}
               >
                 Bayar Sekarang
               </Button>
